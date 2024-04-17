@@ -1,0 +1,62 @@
+
+Criar Imagem - acessar diretório do projeto e executar
+     docker build -t 565632/devops-react-front:1.0.0 .
+OU
+     docker build -t 565632/devops-react-front:1.3.0 "mnt/c/Users/Oscar.LABFER/spring-workspace-git/DevOps_Infnet/React_FrontEnd/"
+
+ACESSAR O MINIKUBE
+     minikube ssh
+     docker images
+
+Caso tenha problemas em utilizar a imagem dentro do Minikube segue
+eval $(minikube docker-env)    -> é usado para configurar o ambiente Docker para apontar para o ambiente Docker dentro do cluster Minikube. 
+                                  Isso permite que você use o Docker CLI para construir, carregar e gerenciar imagens Docker diretamente 
+                                  dentro do contexto do cluster Minikube.
+eval $(minikube docker-env -u) -> Voltar ao Docker
+
+Rodar Container
+    docker run --name react_front -p 5000:5000 --rm -d react-app
+
+Rodar arquivos Kubernetes
+    kubectl apply -f <arquivo yaml>
+
+Apagar pods
+    kubectl delete pods --all --wait
+
+apagar configs
+    kubectl delete deployment <Nome arquivo>
+    kubectl delete service <Nome arquivo>
+
+Visualizar os PODS
+    kubectl get pods -o wide
+
+Visualizar todos os Deployments e Services
+    kubectl get deployments
+    kubectl get services
+
+    minikube service --all
+
+    kubectl describe service <service_name>
+
+    kubectl delete deployments --all
+    kubectl delete services --all
+
+    kubectl apply -f frontreact-service.yaml
+    kubectl apply -f front-deployment.yaml
+
+    cd "mnt/c/Users/Oscar.LABFER/spring-workspace-git/DevOps_Infnet/React_FrontEnd/Arquivos\ Kubernetes/"
+
+Criar Serviço e Deployments
+    cd /
+    kubectl apply -f "mnt/c/Users/Oscar.LABFER/spring-workspace-git/DevOps_Infnet/React_FrontEnd/Arquivos\ Kubernetes/*"
+
+// Criar apenas o Service (NodePort)
+    kubectl apply -f "mnt/c/Users/Oscar.LABFER/spring-workspace-git/DevOps_Infnet/React_FrontEnd/Arquivos\ Kubernetes/frontreact-service.yaml"
+
+// Criar apenas o Deployment
+    kubectl apply -f "mnt/c/Users/Oscar.LABFER/spring-workspace-git/DevOps_Infnet/React_FrontEnd/Arquivos\ Kubernetes/front-deployment.yaml"
+
+
+    find / -name "filepersistent.txt" ! -path "/mnt"
+/var/lib/docker/overlay2/91c5553c59fd112c8873be84201d04d674f940efebc61605788b6931210259ef/merged/home/logsPV/
+/var/lib/docker/overlay2/91c5553c59fd112c8873be84201d04d674f940efebc61605788b6931210259ef/diff/home/logsPV/filepersistent.txt   

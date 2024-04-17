@@ -1,0 +1,39 @@
+/* App.css */
+.header {
+  background-color: #481df3;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.left h1 {
+  margin: 0;
+}
+
+.center ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.center ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.center ul li:last-child {
+  margin-right: 0;
+}
+
+.center ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.center ul li a:hover {
+  color: #ccc;
+}
+

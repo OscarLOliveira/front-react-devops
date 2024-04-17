@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodeService
+  template:
+    metadata:
+      labels:
+        app: nodeService
+    spec:
+      containers:
+        - name: react-frontend
+          image: devops-react-front:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80

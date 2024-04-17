@@ -1,0 +1,16 @@
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define a altura para ocupar toda a altura da tela */
+  }
+  
+  .image-container {
+    text-align: center; /* Alinha horizontalmente a imagem */
+  }
+  
+  .image-container img {
+    margin-top: 5px;
+    max-width: 50%; /* Garante que a imagem não ultrapasse a largura da tela */
+    max-height: 50%; /* Garante que a imagem não ultrapasse a altura da tela */
+  }
