@@ -25,7 +25,7 @@ function Dados() {
           <div className="jumbotron jumbotron-fluid">
               <div className="container">
                   
-                  <button type="button" className="btn btn-info mt-5" onClick={getAllCustomer}>Buscar Dados</button>
+                  <button type="button" className="btn btn-info mt-5" onClick={getAllCustomer}>Get Data</button>
                   <button type="button" className="btn btn-secondary mt-5" onClick={clearData}>Limpar</button>
               </div>
           </div>
