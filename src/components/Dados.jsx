@@ -5,7 +5,7 @@ function Dados() {
     const [customerData, setCustomerData] = useState([]);
 
     const getAllCustomer = () => {
-        axios.get("http://127.0.0.1:37359/dados", {
+        axios.get("http://127.0.0.1:37857/dados", {
             responseType: 'json'
           })
           .then(response => {

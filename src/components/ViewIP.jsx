@@ -8,7 +8,7 @@ function ViewIP() {
 
     const fetchIPAddress = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:37359/ip", {
+        const response = await axios.get("http://127.0.0.1:37857/ip", {
           responseType: 'text'
         });
         if (response.status !== 200) {

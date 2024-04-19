@@ -2,7 +2,7 @@
 Criar Imagem - acessar diretório do projeto e executar
      docker build -t 565632/devops-react-front:1.0.0 .
 OU
-     docker build -t 565632/devops-react-front:1.3.0 "mnt/c/Users/Oscar.LABFER/spring-workspace-git/DevOps_Infnet/React_FrontEnd/"
+     docker build -t 565632/devops-react-front:1.4.0 "mnt/c/Users/Oscar.LABFER/spring-workspace-git/DevOps_Infnet/React_FrontEnd/"
 
 ACESSAR O MINIKUBE
      minikube ssh
