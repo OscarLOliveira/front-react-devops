@@ -4,8 +4,12 @@ import axios from 'axios';
 function Dados() {
     const [customerData, setCustomerData] = useState([]);
 
+    const apiEndpoint = import.meta.env.VITE_APP_URL_PORT; // Acessando a variável de ambiente
+
+
     const getAllCustomer = () => {
-        axios.get("http://127.0.0.1:37857/dados", {
+      console.log({apiEndpoint})
+        axios.get({apiEndpoint} + '/dados', {
             responseType: 'json'
           })
           .then(response => {

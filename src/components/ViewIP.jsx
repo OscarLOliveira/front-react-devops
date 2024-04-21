@@ -4,11 +4,13 @@ import axios from 'axios';
 function ViewIP() {
   const [ip, setIp] = useState('');
 
+  const apiEndpoint = import.meta.env.VITE_APP_URL_PORT; // Acessando a variável de ambiente
+
   useEffect(() => {
 
     const fetchIPAddress = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:37857/ip", {
+        const response = await axios.get({apiEndpoint} + '/ip', {
           responseType: 'text'
         });
         if (response.status !== 200) {

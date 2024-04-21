@@ -4,12 +4,16 @@ import './Home.css';
 
 const Home = () => {
 
+    const appTitle = import.meta.env.VITE_APP_TITLE; // Acessando a variável de ambiente
+
     return (
+
         <div>
             <div className="image-container">
-                <h4>Estudo Kubernetes</h4>
+                <h4>{appTitle}</h4>
                 <img src={imagem} alt="Imagem" />
             </div>
+            <h1></h1>
         </div>
     )
 }
