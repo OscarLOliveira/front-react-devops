@@ -4,7 +4,7 @@ import axios from 'axios';
 function ViewIP() {
   const [ip, setIp] = useState('');
 
-  const apiEndpoint = import.meta.env.VITE_APP_URL_PORT; // Acessando a variável de ambiente
+  //const apiEndpoint = import.meta.env.VITE_APP_URL_PORT; // Acessando a variável de ambiente
 
   useEffect(() => {
 
