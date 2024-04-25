@@ -10,6 +10,7 @@ function ViewIP() {
 
     const fetchIPAddress = async () => {
       try {
+        console.log({apiEndpoint})
         const response = await axios.get({apiEndpoint} + '/ip', {
           responseType: 'text'
         });
