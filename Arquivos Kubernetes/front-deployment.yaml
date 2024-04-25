@@ -6,15 +6,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeService
+      app: node-service-front
   template:
     metadata:
       labels:
-        app: nodeService
+        app: node-service-front
     spec:
       containers:
         - name: react-frontend
           image: devops-react-front:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
