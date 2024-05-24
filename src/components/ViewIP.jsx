@@ -11,7 +11,7 @@ function ViewIP() {
     const fetchIPAddress = async () => {
       try {
         //console.log({apiEndpoint})
-        const response = await axios.get('http://127.0.0.1:39651' + '/ip', {
+        const response = await axios.get('http://127.0.0.1:33917' + '/ip', {
           responseType: 'text'
         });
         if (response.status !== 200) {
