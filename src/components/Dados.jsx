@@ -9,7 +9,7 @@ function Dados() {
 
     const getAllCustomer = () => {
       //console.log({apiEndpoint})
-        axios.get("http://127.0.0.1:34023" + '/dados', {
+        axios.get("http://127.0.0.1:35189" + '/dados', {
             responseType: 'json'
           })
           .then(response => {
